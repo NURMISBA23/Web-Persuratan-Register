@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Info Surat</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src='apiflask.js'></script>
+<script>
+  fetchProtectedData();
+</script>
+</head>
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #2091d9;">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link btn" onclick="keluar()" style="color: white; font-weight: bold; padding: 10px 15px; background-color: #ff4d4d; border-radius: 5px;">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+  
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: linear-gradient(#333333, #262626 95%, #0d0d0d);">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+        <!-- LOGO -->
+        <img src="./img/logo surat.jpeg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">DS Correspondence</span>
+      </a>
+  
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+  
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li>
+              <a href="./index.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                  <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+                </svg>
+                <p>
+                  Home
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                </svg>
+                <p>
+                  Info Surat
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="kalender.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check-fill" viewBox="0 0 16 16">
+                  <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg>
+                <p>
+                  Kalender BPH
+                </p>
+              </a>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="galeri.html" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-image" viewBox="0 0 16 16">
+                  <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                  <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                <p>
+                  Galeri
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+  
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">Info Surat</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Kategori</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Jenis</th>
+                      <th>Definisi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Surat Keputusan</td>
+                      <td>Surat keputusan ditujukan untuk menyampaikan keputusan dari atasan yang berkaitan dengan hal-hal yang selama ini 
+                        <br>belum jelas. Surat keputusan pada umumnya berhubungan dengan suatu instansi atau lembaga.</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Surat Kuasa</td>
+                      <td>Surat kuasa adalah surat pernyataan pelimpahan wewenang dari seseorang
+                        kepada orang lain atau pihak lain 
+                        <br>untuk melakukan suatu kegiatan yang tertera pada pernyataan tersebut.</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Surat Pengantar</td>
+                      <td>Surat Pengantar adalah surat resmi yang dikeluarkan instansi, organisasi, atau lembaga tertentu untuk memberikan <br>informasi penting kepada pihak tertentu.</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Surat Undangan</td>
+                      <td>Surat Undangan adalah surat pemberitahuan yang meminta pihak lain untuk datang pada waktu, tempat, dan acara <br> yang telah ditentukan.</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Surat Perjanjian</td>
+                      <td>Surat Perjanjian adalah surat kesepakatan mengenai hak dan kewajiban masing-masing pihak yang saling mengikatkan <br> diri untuk berbuat sesuatu atau tidak berbuat sesuatu.</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Surat Peminjaman Tempat</td>
+                      <td>Surat Peminjaman Tempat adalah surat izin resmi yang dibutuhkan untuk melaksanakan kegiatan tertentu <br> di ruangan atau bangunan maupun instansi lain.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Kode Klarifikasi</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0" style="height: 300px;">
+                <table class="table table-head-fixed text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Kode</th>
+                      <th>Perihal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>SK-MUBES</td>
+                      <td>Surat Keputusan yang dikeluarkan pada saat kegiatan Musyawarah Besar (MUBES) dilaksanakan</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>SK-BPH</td>
+                      <td>Surat Keputusan yang dikeluarkan untuk mengangkat nama-nama Badan pengurus Harian (BPH)</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>PANPEL-(nama kegiatan)</td>
+                      <td>Persuratan yang dikeluarkan yang bertentangan pada panitia kegiatan<td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>A</td>
+                      <td>Surat yang dikeluarkan untuk membahas tentang keanggotaan</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>PEMBELAJARAN</td>
+                      <td>Surat yang dikeluarkan dalam membahas hal-hal yang berkaitan dengan pembelajaran anggota dan calon anggota</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>SEKRETARIAT</td>
+                      <td>Surat yang dikeluarkan membahas tentang sekretariat</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer" style="text-align: center;">
+    <strong>Copyright &copy; 2023 
+      <!-- <a href="http://adminlte.io">AdminLTE.io</a>.</strong> -->
+    BPH Coconut Computer Club.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="./plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="./dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="./dist/js/demo.js"></script>
+</body>
+</html>
